@@ -1,6 +1,6 @@
 import React, { FormEvent, useCallback, useEffect, useRef } from 'react';
 import logo from './logo.svg'; 
-
+import Input from './components/Input';
 
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
   return (
     <form onSubmit={handleSubmit}>
     <div className="App"> 
-        <input 
-          type="text"
-          placeholder='Digite seu nome'
-          ref={nameInputRef} 
+        <Input 
+          name="name" 
+          label="Nome completo"
+          ref={nameInputRef}
           />
 
             <button type="button" onClick={handleAccepTerms}>
